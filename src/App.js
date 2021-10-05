@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrandicoFacebook, BrandicoInstagram, BrandicoTwitterBird, GgMenuRightAlt, SystemUiconsSun } from './icons/Icons'
+import { GgMenuRightAlt } from './icons/Icons'
 import './App.css'
 
 const App = () => {
@@ -8,80 +8,44 @@ const App = () => {
     <>
       <div className={nav ? 'mobilePopup showPopup' : 'mobilePopup'}>
           <div className="nav">
-            <a href="/" className="active">Home</a>
+            <a href="/" >Products</a>
             <a href="/" >About</a>
-            <a href="/" >Gallery</a>
+            <a href="/" >Resources</a>
             <a href="/" >Contact</a>
-            <button><SystemUiconsSun /></button>
-          </div>
-          <div className="socials">
-            <a href="/">
-              <BrandicoFacebook />
-            </a>
-            <a href="/">
-              <BrandicoInstagram />
-            </a>
-            <a href="/">
-              <BrandicoTwitterBird />
-            </a>
+            <button>Dashboard</button>
           </div>
       </div>
       <div className="app">
-        <div className="sidebar">
-          <h2 className="title">Xae</h2>
-          <div className="socials">
-            <a href="/">
-              <BrandicoFacebook />
-            </a>
-            <a href="/">
-              <BrandicoInstagram />
-            </a>
-            <a href="/">
-              <BrandicoTwitterBird />
-            </a>
-          </div>
-        </div>
         <div className="main">
           <div className="nav">
-            <a href="/" className="active">Home</a>
-            <a href="/" >About</a>
-            <a href="/" >Gallery</a>
-            <a href="/" >Contact</a>
-            <button><SystemUiconsSun /></button>
+            <h2 className="title">UNX</h2>
+            <div className="links">
+              <a href="/" >Products</a>
+              <a href="/" >About</a>
+              <a href="/" >Resources</a>
+              <a href="/" >Contact</a>
+            </div>
+            <button>Dashboard</button>
           </div>
           <div className="mobileNav">
-            <h2 className="title">Xae</h2>
+            <h2 className="title">UNX</h2>
             <button onClick={() => setNav(!nav)}><GgMenuRightAlt /></button>
           </div>
-          <div className="hero">
-            <h1>Adventure Together</h1>
-            <p>Voluptatem, sed asperiores ipsum itaque aliquam omnis dicta nostrum error pariatur sit recusandae unde magni libero repellendus illum alias ratione numquam autem!</p>
+        </div>
+        <div className="blue_ball"></div>
+        <div className="body">
+          <h1 className="title1">The Best Way to</h1>
+          <h1 className="title2">Track your Daily Progress</h1>
+          <p className='paragraph'>UNX allows you to track all your daily task progress using gamification methods and earn rewards for specific coupons</p>
+          <div className="button">
+            <button>Try this app</button>
           </div>
-          <button className="slider" onClick={() => Slide()}><img src="https://i.postimg.cc/w38zhKgM/slider.png" alt="slide" /></button>
-          <div className="footer">
-            <img src="https://i.postimg.cc/DyYttJDh/space.png" alt="space" />
-            <div className="note">
-              <h3>Exploration</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure perspiciatis neque minus consequatur, accusamus itaque?</p>
-            </div>
-            <div className="note">
-              <h3>Exploration</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure perspiciatis neque minus consequatur, accusamus itaque?</p>
-            </div>
-          </div>
+          <img src="https://i.postimg.cc/T1Dt1d8y/image.png" alt="Dashboard" />
         </div>
       </div>
     </>
   )
 
 }
-const Slide = () => {
-  var slider = document.querySelector('.footer')
-  slider.scrollTo({
-    top: 0,
-    left: slider.scrollWidth,
-    behavior: 'smooth'
-  })
-}  
 
 export default App
